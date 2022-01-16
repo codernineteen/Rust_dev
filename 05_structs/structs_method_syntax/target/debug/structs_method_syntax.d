@@ -1,0 +1,1 @@
+C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\05_structs\structs_method_syntax\target\debug\structs_method_syntax.exe: C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\05_structs\structs_method_syntax\src\main.rs

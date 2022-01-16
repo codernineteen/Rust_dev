@@ -1,0 +1,1 @@
+C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\04_ownership\slice_type\target\debug\slice_type.exe: C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\04_ownership\slice_type\src\main.rs

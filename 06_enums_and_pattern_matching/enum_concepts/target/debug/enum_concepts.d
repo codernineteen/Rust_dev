@@ -1,0 +1,1 @@
+C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\06_enums_and_pattern_matching\enum_concepts\target\debug\enum_concepts.exe: C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\06_enums_and_pattern_matching\enum_concepts\src\main.rs
