@@ -1,4 +1,4 @@
-#[derive(Debug)] // This enables us to debug our print
+#[derive(Debug)] // This enables us to debug our print, need to be locatated right on struct , enum and union
 struct Rectangle {
     width: u32,
     height: u32,
