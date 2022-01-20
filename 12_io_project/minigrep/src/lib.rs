@@ -10,12 +10,19 @@ pub struct Config {
 
 impl Config {
     //keep parsing logic in main but separate functionality.
-    pub fn new(args: &[String]) -> Result<Config, &str> {
-        if args.len() < 3 {
-            return Err("not enough arguments");
-        }
-        let query = args[1].clone(); //clone lose more performance than storing references value. but here is really simple case, so it's okay to use clone
-        let filename = args[2].clone();
+    //env::args() returns iterator whose type is std::env::Args
+    //The reason we added 'static lifetime follows Lifetime elision rule
+    pub fn new(mut args: env::Args) -> Result<Config, &'static str> {
+        args.next();
+
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string"),
+        };
+        let filename = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Didn't get a file name"),
+        };
         //set env variable
         //we don't care about value when env was set. we only care whether it is set or not. That's why we use is_err method.
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
@@ -49,26 +56,19 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 //the data returned by this function will live as long as the data passed into search function in 'contents' argument
 //By appending 'a in returned references, we are telling rust we need contents arguments to return
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut results = Vec::new();
-    //lines method returns an iterator , for loop is syntax sugar
-    for line in contents.lines() {
-        if line.contains(query) {
-            results.push(line);
-        }
-    }
-    results
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
 
 pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let query = query.to_lowercase();
-    let mut results = Vec::new();
 
-    for line in contents.lines() {
-        if line.to_lowercase().contains(&query) {
-            results.push(line);
-        }
-    }
-    results
+    contents
+        .lines()
+        .filter(|line| line.to_lowercase().contains(&query))
+        .collect()
 }
 
 //TDD process for helping to build bug-free program

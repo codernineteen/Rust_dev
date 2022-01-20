@@ -1,3 +1,4 @@
+//This project use Closures and Iterators concept. Refer to Chapter 13 directory.
 //short iterator concetps
 //1. iterators produce a series of values
 //2. collect method on an iterator -> turn iterator it into a collection(e.g Vec<T>)
@@ -23,12 +24,9 @@ use std::process;
 //3. improve error description with custom error messages.
 
 fn main() {
-    let args: Vec<String> = env::args().collect(); //args() will panic if an argument is invalid Unicode.
-                                                   //collect is one function that you often need to annotate type. you don't annotate type often in usual case though.
-                                                   //save command line arguments
-
     //handle error in a more user-friendly way
-    let config = Config::new(&args).unwrap_or_else(|err| {
+    //env.args() return iterator
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
         //eprintln! macro that prints to the standard error stream
         eprintln!("Problem parsing arguments: {}", err);
         process::exit(1);
