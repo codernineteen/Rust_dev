@@ -1,0 +1,1 @@
+C:\Users\junsb\OneDrive\바탕\ 화면\Rust\ dev\Rust\ project\19_advanced_rust\advanced_functions_and_closures\target\debug\advanced_functions_and_closures.exe: C:\Users\junsb\OneDrive\바탕\ 화면\Rust\ dev\Rust\ project\19_advanced_rust\advanced_functions_and_closures\src\main.rs
