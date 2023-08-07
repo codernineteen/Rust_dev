@@ -1,1 +1,0 @@
-C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\05_structs\struc_example\target\debug\struc_example.exe: C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\05_structs\struc_example\src\main.rs
