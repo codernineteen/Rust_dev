@@ -1,1 +1,0 @@
-C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\03_0A_practice_basics\franheit_to_celsius\target\debug\franheit_to_celsius.exe: C:\Users\junsb\OneDrive\바탕\ 화면\polkadot\ dev\Rust\ project\03_0A_practice_basics\franheit_to_celsius\src\main.rs
